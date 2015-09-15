@@ -1,22 +1,28 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package src;
 
-/**
- *
- * @author tyle4760
- */
-public class Main {
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JFrame;
 
-    /**
-     * @param args the command line arguments
-     */
+public class Main {
+    public static JFrame frame=new JFrame();
+    public static JButton mainMenu,Employee,divide,powersChart,SalaryTable;
+    public static EmployeePay ep;
     public static void main(String[] args) {
-        // TODO code application logic here
+        frame.setSize(475,200);
+        frame.setDefaultCloseOperation(3);
+        frame.setLayout(null);
+        frame.setResizable(false);
+        mainMenu=new JButton();
+        mainMenu.setBounds(0,0,150,30);
+        mainMenu.setVisible(false);
+        mainMenu.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                
+            }
+        });
+        ep=new EmployeePay();
+        frame.add(mainMenu);
     }
-    
 }
