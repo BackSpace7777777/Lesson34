@@ -4,4 +4,8 @@ public class EmployeePay {
     {
         
     }
+    public void show(boolean tf)
+    {
+        
+    }
 }

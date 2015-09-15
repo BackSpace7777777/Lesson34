@@ -22,7 +22,31 @@ public class Main {
                 
             }
         });
+        Employee=new JButton();
+        Employee.setBounds(0,0,150,30);
+        Employee.setText("Employee Pay");
+        Employee.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                menu(false);
+                ep.show(true);
+            }
+        });
+        frame.add(Employee);
+        frame.add(mainMenu);
         ep=new EmployeePay();
         frame.add(mainMenu);
+    }
+    public static void menu(boolean tf)
+    {
+        if(tf)
+        {
+            frame.setSize(475,200);
+            mainMenu.setVisible(false);
+            ep.show(false);
+        }
+        else
+        {
+            mainMenu.setVisible(true);
+        }
     }
 }
