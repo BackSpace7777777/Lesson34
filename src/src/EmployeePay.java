@@ -2,6 +2,7 @@ package src;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
@@ -10,6 +11,7 @@ public class EmployeePay extends Main{
     private JComboBox employes;
     private JTextField hours;
     private JLabel hlabel;
+    private JButton set;
     private double hoursD[]=new double[5];
     private byte index=0;
     public EmployeePay()
@@ -37,18 +39,10 @@ public class EmployeePay extends Main{
         hlabel.setBounds(5,41,40,25);
         hlabel.setText("Hours:");
         hlabel.setVisible(false);
+        set=new JButton();
         frame.add(hlabel);
         frame.add(hours);
         frame.add(employes);
-        Thread employeHourUpdate=new Thread(new Runnable() {
-            public void run() {
-                while(true)
-                {
-                    
-                }
-            }
-        });
-        employeHourUpdate.start();
     }
     public void show(boolean tf)
     {
