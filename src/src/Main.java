@@ -19,7 +19,7 @@ public class Main {
         mainMenu.setVisible(false);
         mainMenu.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                
+                menu(true);
             }
         });
         Employee=new JButton();
