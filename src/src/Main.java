@@ -6,7 +6,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 
 public class Main {
-    public static JFrame frame=new JFrame();
+    public static JFrame frame=new JFrame("Lesson 3 and 4");
     public static JButton mainMenu,Employee,divide,powersChart,SalaryTable;
     public static EmployeePay ep;
     public static void main(String[] args) {
