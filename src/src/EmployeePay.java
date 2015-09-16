@@ -108,19 +108,25 @@ public class EmployeePay extends Main{
                 {
                     try
                     {
-                        totalMoney.setText("$" + (hoursD[employes.getSelectedIndex()]*15));
-                        if(hoursD[employes.getSelectedIndex()]<40)
+                        if(hoursD[employes.getSelectedIndex()]<=40)
                         {
                             RP.setText("$" + (hoursD[employes.getSelectedIndex()]*15));
+                            totalMoney.setText("$" + (hoursD[employes.getSelectedIndex()]*15));
+                        }
+                        else
+                        {
+                            RP.setText("$600.0");
                         }
                         if(hoursD[employes.getSelectedIndex()]>40)
                         {
-                            OT.setText("$" + (hoursD[employes.getSelectedIndex()]*15));
+                            OT.setText("$" + ((hoursD[employes.getSelectedIndex()]-40)*20));
+                            totalMoney.setText("$" + (600+((hoursD[employes.getSelectedIndex()]-40)*20)));
                         }
                         else
                         {
                             OT.setText("$0.0");
                         }
+                        Thread.sleep(50);
                     }
                     catch(Exception ex){}
                 }
