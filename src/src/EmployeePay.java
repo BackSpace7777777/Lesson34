@@ -26,8 +26,11 @@ public class EmployeePay extends Main{
         }
         employes.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                index=(byte)employes.getSelectedIndex();
-                System.out.println(index);
+                try
+                {
+                    hours.setText("" + hoursD[employes.getSelectedIndex()]);
+                }
+                catch(Exception ex){}
             }
         });
         employes.setSelectedIndex(0);
@@ -40,6 +43,32 @@ public class EmployeePay extends Main{
         hlabel.setText("Hours:");
         hlabel.setVisible(false);
         set=new JButton();
+        set.setBounds(210,40,150,30);
+        set.setText("Set");
+        set.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                try
+                {
+                    double temp=Double.valueOf(hours.getText());
+                    if(temp>=0 && temp<=70)
+                    {
+                        hoursD[employes.getSelectedIndex()]=temp;
+                    }
+                    else if(temp>70)
+                    {
+                        hours.setText("70");
+                        hoursD[employes.getSelectedIndex()]=70D;
+                    }
+                    else if(temp<0)
+                    {
+                        hours.setText("0");
+                        hoursD[employes.getSelectedIndex()]=0D;
+                    }
+                }catch(Exception ex){}
+            }
+        });
+        set.setVisible(false);
+        frame.add(set);
         frame.add(hlabel);
         frame.add(hours);
         frame.add(employes);
@@ -50,5 +79,6 @@ public class EmployeePay extends Main{
         employes.setVisible(tf);
         hours.setVisible(tf);
         hlabel.setVisible(tf);
+        set.setVisible(tf);
     }
 }
