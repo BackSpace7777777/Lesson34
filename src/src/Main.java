@@ -9,6 +9,7 @@ public class Main {
     public static JFrame frame=new JFrame("Lesson 3 and 4 - Menu");
     public static JButton mainMenu,Employee,divide,powersChart,SalaryTable;
     public static EmployeePay ep;
+    public static Divide d;
     public static void main(String[] args) {
         frame.setSize(475,200);
         frame.setDefaultCloseOperation(3);
@@ -44,6 +45,7 @@ public class Main {
         frame.add(Employee);
         frame.add(mainMenu);
         ep=new EmployeePay();
+        d=new Divide();
         frame.add(mainMenu);
         frame.setVisible(true);
     }
