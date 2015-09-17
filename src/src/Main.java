@@ -11,6 +11,7 @@ public class Main {
     public static EmployeePay ep;
     public static Divide d;
     public static PowersChart pc;
+    public static Salary s;
     public static void main(String[] args) {
         frame.setSize(475,200);
         frame.setDefaultCloseOperation(3);
@@ -52,6 +53,16 @@ public class Main {
                 pc.visible(true);
             }
         });
+        SalaryTable=new JButton();
+        SalaryTable.setBounds(160,40,150,30);
+        SalaryTable.setText("Salary Table");
+        SalaryTable.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                menu(false);
+                s.visible(true);
+            }
+        });
+        frame.add(SalaryTable);
         frame.add(powersChart);
         frame.add(divide);
         frame.add(Employee);
@@ -59,6 +70,7 @@ public class Main {
         ep=new EmployeePay();
         d=new Divide();
         pc=new PowersChart();
+        s=new Salary();
         frame.add(mainMenu);
         frame.setVisible(true);
     }
@@ -67,12 +79,14 @@ public class Main {
         Employee.setVisible(tf);
         divide.setVisible(tf);
         powersChart.setVisible(tf);
+        SalaryTable.setVisible(tf);
         if(tf)
         {
             mainMenu.setVisible(false);
             ep.visible(false);
             d.visible(false);
             pc.visible(false);
+            s.visible(false);
             frame.setSize(475,200);
             frame.setTitle("Lesson 3 and 4 - Menu");
         }
