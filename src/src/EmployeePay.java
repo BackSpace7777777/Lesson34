@@ -134,7 +134,7 @@ public class EmployeePay extends Main{
         });
         update.start();
     }
-    public void show(boolean tf)
+    public void visible(boolean tf)
     {
         frame.setTitle("Lesson 3 and 4 - Employee Pay");
         frame.setSize(475,215);

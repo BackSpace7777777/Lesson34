@@ -30,7 +30,7 @@ public class Main {
         Employee.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 menu(false);
-                ep.show(true);
+                ep.visible(true);
             }
         });
         divide=new JButton();
@@ -38,7 +38,8 @@ public class Main {
         divide.setBounds(160,5,150,30);
         divide.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                
+                menu(false);
+                d.visible(true);
             }
         });
         frame.add(divide);
@@ -56,7 +57,8 @@ public class Main {
         if(tf)
         {
             mainMenu.setVisible(false);
-            ep.show(false);
+            ep.visible(false);
+            d.visible(false);
             frame.setSize(475,200);
             frame.setTitle("Lesson 3 and 4 - Menu");
         }
