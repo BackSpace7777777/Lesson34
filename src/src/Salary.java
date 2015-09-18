@@ -16,8 +16,10 @@ public class Salary extends Main{
         currSal[1]=40000;
         for(int i=2;i<20;i++)
         {
-            currSal[i]=currSal[i-1]*1.03;
-            raise[i]=currSal[i-1]*0.03;
+            currSal[i]=Math.round((currSal[i-1]*1.03)*100);
+            currSal[i]=currSal[i]/100;
+            raise[i]=Math.round((currSal[i-1]*0.03)*100);
+            raise[i]=raise[i]/100;
         }
         panel=new JPanel()
         {
@@ -40,6 +42,11 @@ public class Salary extends Main{
                     {
                         g.drawString("|",130+(150*i),35+(15*k));
                     }
+                }
+                for(int i=0;i<20;i++)
+                {
+                    g.drawString("" + (i+1),50,50+(20*i));
+                    g.drawString("" + currSal[i],160,50+(20*i));
                 }
                 repaint();
             }
