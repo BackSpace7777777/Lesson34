@@ -119,8 +119,8 @@ public class EmployeePay extends Main{
                         }
                         if(hoursD[employes.getSelectedIndex()]>40)
                         {
-                            OT.setText("$" + ((hoursD[employes.getSelectedIndex()]-40)*20));
-                            totalMoney.setText("$" + (600+((hoursD[employes.getSelectedIndex()]-40)*20)));
+                            OT.setText("$" + ((hoursD[employes.getSelectedIndex()]-40)*22.5));
+                            totalMoney.setText("$" + (600+((hoursD[employes.getSelectedIndex()]-40)*22.5)));
                         }
                         else
                         {
