@@ -27,6 +27,20 @@ public class Salary extends Main{
                 g.clearRect(0,0,panel.getWidth(),panel.getHeight());
                 g.setColor(Color.BLACK);
                 g.fillRect(0,0,panel.getWidth(),panel.getHeight());
+                g.setColor(Color.WHITE);
+                g.drawString("Year",10,25);
+                g.drawString("Old Salary",10+(150*1),25);
+                g.drawString("Raise",10+(150*2),25);
+                g.drawString("New Salary",10+(150*3),25);
+                for(int i=0;i<4;i++)
+                g.drawString("============",10+(150*i),35);
+                for(int i=0;i<3;i++)
+                {
+                    for(int k=0;k<35;k++)
+                    {
+                        g.drawString("|",130+(150*i),35+(15*k));
+                    }
+                }
                 repaint();
             }
         };
