@@ -6,7 +6,6 @@ import javax.swing.JPanel;
 
 public class Salary extends Main{
     private JPanel panel;
-    private int year=0;
     private double raise[]=new double[20],currSal[]=new double[20];
     public Salary()
     {
@@ -46,7 +45,8 @@ public class Salary extends Main{
                 for(int i=0;i<20;i++)
                 {
                     g.drawString("" + (i+1),50,50+(20*i));
-                    g.drawString("" + currSal[i],160,50+(20*i));
+                    g.drawString("" + currSal[i],10+(150*1),50+(20*i));
+                    g.drawString("" + raise[i],10+(150*2),50+(20*i));
                 }
                 repaint();
             }
