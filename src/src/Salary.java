@@ -9,15 +9,16 @@ public class Salary extends Main{
     private double raise[]=new double[20],currSal[]=new double[20];
     public Salary()
     {
-        raise[0]=0;
-        raise[1]=1200;
         currSal[0]=0;
         currSal[1]=40000;
+        raise[0]=40000;
+        raise[1]=Math.round((40000*0.03)*100);
+        raise[1]=raise[1]/100;
         for(int i=2;i<20;i++)
         {
             currSal[i]=Math.round((currSal[i-1]*1.03)*100);
             currSal[i]=currSal[i]/100;
-            raise[i]=Math.round((currSal[i-1]*0.03)*100);
+            raise[i]=Math.round((currSal[i]*0.03)*100);
             raise[i]=raise[i]/100;
         }
         panel=new JPanel()
@@ -47,6 +48,10 @@ public class Salary extends Main{
                     g.drawString("" + (i+1),50,50+(20*i));
                     g.drawString("" + currSal[i],10+(150*1),50+(20*i));
                     g.drawString("" + raise[i],10+(150*2),50+(20*i));
+                    if(i!=19)
+                    g.drawString("" + currSal[i+1],10+(150*3),50+(20*i));
+                    else
+                    g.drawString("" + (currSal[i]+raise[i]),10+(150*3),50+(20*i));
                 }
                 repaint();
             }
